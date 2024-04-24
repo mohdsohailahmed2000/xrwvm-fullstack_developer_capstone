@@ -10,11 +10,11 @@ const dealerships = new Schema({
 	city: {
     type: String,
     required: true
-  },
-  state: {
+    },
+    state: {
     type: String,
     required: true
-  },
+    },
   address: {
     type: String,
     required: true
