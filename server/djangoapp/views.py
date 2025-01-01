@@ -52,7 +52,6 @@ def registration(request):
         return JsonResponse(
             {"userName": username, "error": "Already Registered"}
         )
-    
     user = User.objects.create_user(
         username=username,
         first_name=first_name,
@@ -101,7 +100,6 @@ def add_review(request):
     """Submit a new review."""
     if request.user.is_anonymous:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
-    
     data = json.loads(request.body)
     try:
         post_review(data)
